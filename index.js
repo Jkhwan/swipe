@@ -107,7 +107,7 @@ Swipe.prototype.refresh = function(){
   }
 
   this.visible = visible;
-  this.childWidth = [0];
+  this.childWidth = children.visible[0].getBoundingClientRect().width;
   this.width = 0;
   for(var i = 0, size = this.children().all.length; i < size; i++) {
     this.width += this.children().all[i].clientWidth;
